@@ -14,6 +14,7 @@ class Kucoin {
     }
     this.environment = config.environment
     this.baseURL = url
+    this.webURL = 'https://futures.kucoin.com'
     this.secretKey = config.secretKey
     this.apiKey = config.apiKey
     this.passphrase = config.passphrase
