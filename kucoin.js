@@ -22,7 +22,8 @@ class Kucoin {
     const Market = require('./lib/market')
     const Trade = require('./lib/trade')
     const Sockets = require('./lib/websockets')
-    Object.assign(this, User, Market, Trade, Sockets)
+    const Web = require('./lib/web')
+    Object.assign(this, User, Market, Trade, Sockets, Web)
   }
 
   sign(endpoint, method, params = {}) {
