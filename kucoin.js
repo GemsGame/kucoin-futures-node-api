@@ -12,9 +12,10 @@ class Kucoin {
     } else {
       url = 'https://api-sandbox-futures.kucoin.com'
     }
+    this.webURL = 'https://futures.kucoin.com'
+    this.kuccoURL = 'http://localhost:3003'
     this.environment = config.environment
     this.baseURL = url
-    this.webURL = 'https://futures.kucoin.com'
     this.secretKey = config.secretKey
     this.apiKey = config.apiKey
     this.passphrase = config.passphrase
@@ -23,7 +24,8 @@ class Kucoin {
     const Trade = require('./lib/trade')
     const Sockets = require('./lib/websockets')
     const Web = require('./lib/web')
-    Object.assign(this, User, Market, Trade, Sockets, Web)
+    const Kucco = require('./lib/kucco')
+    Object.assign(this, User, Market, Trade, Sockets, Web, Kucco)
   }
 
   sign(endpoint, method, params = {}) {
