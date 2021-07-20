@@ -13,7 +13,7 @@ class Kucoin {
       url = 'https://api-sandbox-futures.kucoin.com'
     }
     this.webURL = 'https://futures.kucoin.com'
-    this.kuccoURL = 'http://localhost:3003'
+    this.kuccoURL = 'http://127.0.0.1:3003'
     this.environment = config.environment
     this.baseURL = url
     this.secretKey = config.secretKey
